@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: "Inter";
+  background-color: #121212;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  border: none;
+}
+
+.exp-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  margin-top: 10rem;
+}
+
+.exp-container > h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.exp-conteudo {
+  display: flex;
+}
+
+.lista-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.lista-titles-item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #c4c4c4;
+  padding: 1rem 2rem;
+  border-left: 2px solid #151515;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.lista-titles-item:hover {
+  background: #313131;
+}
+
+.lista-titles-item.ativo {
+  color: white;
+  background: #151515;
+  border-left: 2px solid #00d2df;
+}
+
+.lista-conteudos-item {
+  position: absolute;
+  opacity: 0;
+  margin-left: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+}
+
+.lista-conteudos-item.ativo {
+  animation: fadeRight 0.4s forwards;
+}
+
+.conteudo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conteudo-header h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.conteudo-header p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.conteudo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  width: 637px;
+}
+
+.conteudo-content h2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #00d2df;
+}
+
+.conteudo-content p {
+  color: #c4c4c4;
+  max-width: 636px;
+}
+
+@keyframes fadeRight {
+  0% {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  100% {
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
